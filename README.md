@@ -9,8 +9,8 @@
 | Vojtěch Lukáš | <i>\<task\></i> |
 
 ### DLs
-> **Warning**
-> Kontrolní studie: 6. týden: do 16. března
+> **Warning**<br>
+Kontrolní studie: 6. týden: do 16. března
 
-> **Warning**
+> **Warning**<br>
 > Hotový projekt: 11. týden
