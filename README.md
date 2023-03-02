@@ -18,3 +18,4 @@ Kontrolní studie: 6. týden: do 16. března
 ### Technologie
 
 ### Podpora
+[https://moodle.vut.cz/mod/page/view.php?id=275074](eLearning)
