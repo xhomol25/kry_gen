@@ -10,10 +10,10 @@
 
 ### DLs
 > **Warning**<br>
-Kontrolní studie: 6. týden: do 16. března
+Kontrolní studie: <b>6. týden: do 16. března<b>
 
 > **Warning**<br>
-> Hotový projekt: 11. týden
+> Hotový projekt: <b>11. týden<b>
 
 ### Technologie
 
