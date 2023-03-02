@@ -14,3 +14,7 @@ Kontrolní studie: 6. týden: do 16. března
 
 > **Warning**<br>
 > Hotový projekt: 11. týden
+
+### Technologie
+
+### Podpora
