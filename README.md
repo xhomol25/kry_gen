@@ -1,5 +1,12 @@
 # MPC-KRY 22/23L
 ## Generátor úloh do aplikované kryptografie
+### Zadání
+Navrhněte a implementujte vlastní službu pro generování úloh do aplikované kryptografie (např. výpočet RSA, protokol Diffie-Hellman, prolomení hashe, testy prvočíselnosti, tiket útoky apod.). Služba bude mít vlastní rozhraní (REST API), prostřednictvím kterého bude možné vyžádat úlohu (HTTP metoda GET) včetně nápověd a správného výsledku (úloha se bude předávat ve formátu JSON). Součástí služby bude i režim pro přímou komunikaci, kde se budou úlohy generovat do konzole nebo grafického uživatelského rozhraní, pomocí kterého služba přijme výsledek ze strany uživatele a následně ho vyhodnotí.
+
+Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím dostupných knihoven.
+
+[1] HomeCryptoHack [online]. Dostupné z: https://cryptohack.org/
+
 ### Tým
 | jméno | task |
 |-------|------|
@@ -7,6 +14,9 @@
 | Dominik Chremčík | <i>\<task\></i> |
 | Jiří Marák | <i>\<task\></i> |
 | Vojtěch Lukáš | <i>\<task\></i> |
+
+### Task Pool
+[`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/), `back-end (návrh, zpracování)`,  `databáze úloh (SQL? + rozhraní?)`, `front-end (konzole/GUI)` 
 
 ### DLs
 > **Warning**<br>
