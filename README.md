@@ -30,3 +30,4 @@ Kontrolní studie: <b>6. týden: do 16. března<b>
 ### Podpora
 - [eLearning](https://moodle.vut.cz/mod/page/view.php?id=275074)
 - [Rider (IDE pro .NET) Studentská licence](https://www.jetbrains.com/community/education/#students)
+- [JSON introduction](https://www.w3schools.com/js/js_json_intro.asp)
