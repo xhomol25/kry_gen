@@ -11,7 +11,7 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 | jméno | task |
 |-------|------|
 | Michal Homola | <i>\<task\></i> |
-| Dominik Chremčík | <i>\<task\></i> |
+| Dominik Chrenčík | <i>\<task\></i> |
 | Jiří Marák | <i>\<task\></i> |
 | Vojtěch Lukáš | <i>\<task\></i> |
 
