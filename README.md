@@ -16,7 +16,7 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 | Vojtěch Lukáš | <i>\<task\></i> |
 
 ### Task Pool
-[`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/), `back-end (návrh, zpracování)`,  `databáze úloh (SQL? + rozhraní?)`, `front-end (konzole/GUI)` 
+[`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/), [`back-end (návrh, zpracování)`](./brainstorming/back-end/),  [`databáze úloh (SQL? + rozhraní?)`](./brainstorming/ulohy/), [`front-end (konzole/GUI)`](./brainstorming/front-end/) 
 
 ### DLs
 > **Warning**<br>
