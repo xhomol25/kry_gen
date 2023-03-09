@@ -10,10 +10,10 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 ### Tým
 | jméno | task |
 |-------|------|
-| Michal Homola | <i>\<task\></i> |
-| Dominik Chrenčík | <i>\<task\></i> |
-| Jiří Marák [@xmarak02] | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
-| Vojtěch Lukáš | <i>\<task\></i> |
+| Michal Homola [@xhomol25](https://github.com/xhomol25) | <i>\<task\></i> |
+| Dominik Chrenčík [xchren05](https://github.com/xchren05) | <i>\<task\></i> |
+| Jiří Marák [@xmarak02](https://github.com/xmarak02) | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
+| Vojtěch Lukáš [@voytex](https://github.com/voytex) | <i>\<task\></i> |
 
 ### Task Pool
 [`back-end (návrh, zpracování)`](./brainstorming/back-end/),  [`databáze úloh (SQL? + rozhraní?)`](./brainstorming/ulohy/), [`front-end (konzole/GUI)`](./brainstorming/front-end/) 
