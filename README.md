@@ -12,11 +12,11 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 |-------|------|
 | Michal Homola | <i>\<task\></i> |
 | Dominik Chrenčík | <i>\<task\></i> |
-| Jiří Marák | <i>\<task\></i> |
+| Jiří Marák | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
 | Vojtěch Lukáš | <i>\<task\></i> |
 
 ### Task Pool
-[`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/), [`back-end (návrh, zpracování)`](./brainstorming/back-end/),  [`databáze úloh (SQL? + rozhraní?)`](./brainstorming/ulohy/), [`front-end (konzole/GUI)`](./brainstorming/front-end/) 
+[`back-end (návrh, zpracování)`](./brainstorming/back-end/),  [`databáze úloh (SQL? + rozhraní?)`](./brainstorming/ulohy/), [`front-end (konzole/GUI)`](./brainstorming/front-end/) 
 
 ### DLs
 > **Warning**<br>

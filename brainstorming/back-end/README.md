@@ -4,3 +4,4 @@
 - backend by šel i v **Pythonu**, šel bych ale spíš do **C#**, aspoň pokud vyjde ten Azure
 - Součástí backendu by měla být i databáze úloh, se kterou by měl backend komunikovat (vrstva DAL)
 - [ASP.NET on Azure](https://learn.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore?tabs=net60&pivots=development-environment-azure-portal)
+- [ASP.NET w/ SQL on Azure](https://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app)
