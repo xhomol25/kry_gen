@@ -12,7 +12,7 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 |-------|------|
 | Michal Homola | <i>\<task\></i> |
 | Dominik Chrenčík | <i>\<task\></i> |
-| Jiří Marák | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
+| Jiří Marák [@xmarak02] | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
 | Vojtěch Lukáš | <i>\<task\></i> |
 
 ### Task Pool
