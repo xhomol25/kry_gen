@@ -1,6 +1,10 @@
 \documentclass[titlepage]{article}
 
 \usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\input{schemes/database-glyph.tex}
 
 \title{Generátor úloh do aplikované kryptografie\\Kontrolní studie}
 \author{Michal Homola,\\Dominik Chremčík,\\Jiří Marák,\\Vojtěch Lukáš}
@@ -15,8 +19,16 @@
 
 \section{Architektura}
 Systém bude rozdělený na back-end na Azure, front-end v Pythonu a databázi SQL. 
+\begin{figure}[h!]
+    \centering
+    \include{schemes/system-scheme.tex}    
+    \caption{Schéma systému}
+    \label{fig:sys}
+\end{figure}
+
 
 \subsection{Databáze úloh}
+Databáze bude ve formátu...
 
 \subsection{Back-end}
 
