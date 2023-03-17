@@ -20,7 +20,7 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 
 ### DLs
 > **Warning**<br>
-Kontrolní studie: <b>6. týden: do 16. března<b>
+Kontrolní studie: <b>26.3. 23:59<b>
 
 > **Warning**<br>
 > Hotový projekt: <b>11. týden<b>

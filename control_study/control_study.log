@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.5)  11 MAR 2023 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.5)  11 MAR 2023 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -312,20 +312,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-] (/Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/control_study.aux (/Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/schemes/system-scheme.aux)) ) 
+] [2] (/Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/control_study.aux (/Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/schemes/system-scheme.aux)) ) 
 Here is how much of TeX's memory you used:
- 12534 strings out of 478994
- 255993 string characters out of 5858185
- 536479 words of memory out of 5000000
- 29812 multiletter control sequences out of 15000+600000
+ 12535 strings out of 478994
+ 256001 string characters out of 5858185
+ 538479 words of memory out of 5000000
+ 29813 multiletter control sequences out of 15000+600000
  407685 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,9n,89p,453b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,9n,89p,456b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on /Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/control_study.pdf (2 pages, 68835 bytes).
+Output written on /Users/vojtechlukas/Documents/GitHub/kry_gen/control_study/control_study.pdf (3 pages, 72116 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 37 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
