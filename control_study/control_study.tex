@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{dirtree}
+\usepackage{amsmath}
 
 \input{schemes/database-glyph.tex}
 
@@ -33,7 +34,97 @@ Klientská aplikace bude fungovat jako přístupový bod a sehrávat roli prezen
 
 
 \subsection{Databáze úloh}
-Databáze bude ve formátu...
+
+V rámci návrhu kryptografických úloh, byly úlohy co nejvíce standardizované, z důvodu jejich uložení v jednotné databázi. Zároveň musí být výsledky jednoznačné tak, aby byly dobře porovnatelné s výsledky zadanými řešitelem. Proto jsou výsledky koncipovány jako číslo, či prosté \uv{ano/ne}.      
+
+ V databázi jsou zahrnuty různé typů kryptografických úloh, aby bylo možné si vyzkoušet různé druhy kryptografických algoritmů a technologií. Součástí každé úlohy bude i nápověda k řešení, tak aby i řešitel, který si neví rady, mohl příklad vyřešit.
+
+\subsubsection{RSA}
+Část  úloh zahrnuje výpočet RSA algoritmu. Zadáno je zde šifrování nebo naopak dešifrování zprávy pomocí zadaného klíče algoritmem RSA.
+
+Vygenerování klíče: 
+\begin{align*}
+     n &= p \times q \\
+    \phi(n) &= (p-1) \times (q-1) \\
+    e, d &= \text{pro které platí} (d \times e) \bmod \phi(n) = 1 \\
+    \text{Veřejný klíč: } (n, e) \\
+    \text{Soukromý klíč: } d
+\end{align*}
+
+Šifrování:
+\begin{align*}
+    \text{Zpráva } M \\
+    C &= M^e \bmod n
+\end{align*}
+
+Dešifrování:
+\begin{align*}
+    \text{Kryptogram: } C \\
+    M &= C^d \bmod n
+\end{align*}
+
+
+\subsubsection{Diffie-Hellman}
+Další úloha je použití protokolu Diffie-Hellman, který slouží k výměně klíčů mezi dvěma stranami bez potřeby sdílení klíčů předem. Protokol je založen na principech asymetrické kryptografie a umožňuje ustanovení šifrovacího klíče přes nedůvěryhodné médium.
+V úloze se ověřuje pochopení procesu výměny a výpočtu klíčů mezi dvěma stranami.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{dh.png}
+\caption{\label{fig:DH}Diffie-Hellman - předání klíčů}
+\end{figure}
+
+
+
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c@{\hspace{5mm}}|c|}
+    \hline
+  ALICE & BOB \\
+  \hline
+  $a\in_{R} Z_{q} $ & $b\in_{R} Z_{q} $\\
+  \hline
+  $A=g^{a}mod\,p$& $B=g^{b}mod\,p$\\
+  \hline
+  $K=B^{a}mod\,p$ &  $K=A^{b}mod\,p$ \\
+  \hline
+\end{tabular}
+\end{center}
+
+
+
+
+\subsubsection{Test prvočíselnosti}
+Test prvočíselnosti se také nachází v databázi úloh. Tato úloha zahrnuje ověření, zda je zadané číslo prvočíslo či nikoliv, což je základem pro mnoho kryptografických algoritmů. Pro testovaní zda je číslo prvočíslem lze použít například Lucas–Lehmerův test prvočíselnosti pro Mersennova prvočísla:
+\begin{align*}
+    &\text{Nechť } p \text{ je liché prvočíslo a } M = 2^p-1 \\
+    &\text{Nastavíme } s_0 = 4 \\
+    &\text{Pro } i=1,2,\dots,p-2: \\
+    &\quad s_i = (s_{i-1}^2-2) \bmod M \\
+    &\text{Pokud } s_{p-2} = 0 \text{, pak } M \text{ je Mersennovo prvočíslo.} \\
+    &\text{Jinak } M \text{ je složené číslo.}
+\end{align*}
+
+\subsubsection{GCD a LCM}
+Dále jsou zde také příklady na výpočet nejmenšího společného násobku (Least Common Multiple - LCM) a největšího společného dělitele (GCD - Greatest common divisor). které také najdou uplatnění v kryptografii. Při řešení těchto příkladů lze využít například rozklad na prvočísla.
+\newline
+
+\subsubsection{Modulární aritmetika}
+V databázi jsou také příklady na modulární aritmetiku,,jako výpočet operace modulo nebo kongruence. 
+Operace modulo $(mod\,n)$ vrátí pouze zbytek vstupního čísla po
+dělení cıslem $n$.
+
+
+Cele číslo je kongruentní modulo $n$ s celým číslem $b$ tehdy, když
+je rozdíl $a - b$ dělitelný číslem $n$. Zapisujeme jako $a \equiv b (mod n)$.
+Pro kongruence modulo platí:
+\begin{align*}
+    a \equiv b \pmod{m} \\
+    b \equiv a \pmod{m} \\
+    % a  neco 
+\end{align*}
+
+V dalším vývoji by mohla být nápověda rozdělena na více úrovní, tak aby si je řešitel mohl postupně vyžádat v případě, že mu bude postačovat pouze malá nápověda a potřebuje pouze \uv{nakopnout}, nebo si neví rady a potřebuje nápovědu větší. Taktéž budu přidány další úlohy z oblasti aplikované kryptografie.   
 
 \subsection{Back-end}
 Architektura back-endu je navržena podle doporučení REST API. Původní návrhy řešení počítaly s využitím .NET serveru na portálu Microsoft Azure. Nakonec bylo ale upřednostněno řešení využívající PHP server. Celé řešení back-endu bylo založeno na \cite{restapi}. Od začátku byl projekt vyvíjen přímo na serveru pro usnadnění přístupu. 
