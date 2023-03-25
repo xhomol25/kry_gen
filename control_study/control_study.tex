@@ -3,6 +3,8 @@
 \usepackage[czech]{babel}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{dirtree}
 
 \input{schemes/database-glyph.tex}
 
@@ -18,7 +20,7 @@
 %TODO: Úvod, o projektu, autoři, kdo má co na práci apod.
 
 \section{Architektura}
-Schéma připravovaného systému lze vidět na obr.\,\ref{fig:sys}. Úlohy budou uloženy v SQL databázi v MS Azure. K~této databázi bude mít přístup pouze webový .NET~server. Ten slouží jako \uv{prostředník} mezi klientem a databází. Dále by měl do úloh vkládat náhodná data (klíče apod.) a~případně také vyhodnocovat výsledky. 
+Schéma připravovaného systému lze vidět na obr.\,\ref{fig:sys}. Úlohy budou uloženy v SQL databázi. K~této databázi bude mít přístup pouze webový PHP~server. Ten slouží jako \uv{prostředník} mezi klientem a databází. Dále by měl do úloh vkládat náhodná data (klíče apod.) a~případně také vyhodnocovat výsledky. 
 Klientská aplikace bude fungovat jako přístupový bod a sehrávat roli prezentační vrstvy. Pro jednoduchost bude vyvinuta v jazyce Python s oddělenou logickou vrstvou. Bude tedy možné na tuto vrstvu napojit i jednoduché grafické rozhraní. 
 \begin{figure}[h!]
     \centering
@@ -34,12 +36,32 @@ Klientská aplikace bude fungovat jako přístupový bod a sehrávat roli prezen
 Databáze bude ve formátu...
 
 \subsection{Back-end}
-
+Architektura back-endu je navržena podle doporučení REST API. Původní návrhy řešení počítaly s využitím .NET serveru na portálu Microsoft Azure. Nakonec bylo ale upřednostněno řešení využívající PHP server. 
+\subsubsection{Struktura webového serveru}
+\dirtree{%
+    .1 web.
+    .2 Model.
+    .3 Database.php.
+    .3 TaskModel.php.
+    .2 Controller.
+    .3 Api.
+    .4 BaseController.php.
+    .4 TaskController.php.
+    .2 inc.
+    .3 config.php.
+    .3 bootstrap.php.
+    .2 index.php.
+}
 
 \subsection{Front-end}
 
 \section{Současný stav}
 
 \section*{Závěr}
+
+\begin{thebibliography}{9}
+    \bibitem{bib:php_restapi}
+    SONI, Sajal. How to build a simple REST API in PHP. \emph{En\-va\-to Tuts+} [on\-li\-ne]. 27-5-2021 [cit. 2023-03-25]. Dostupné z: \url{https://code.tutsplus.com/tutorials/how-to-build-a-simple-rest-api-in-php--cms-37000}
+\end{thebibliography}
 
 \end{document}
