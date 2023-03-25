@@ -15,8 +15,6 @@ Projekt naprogramujte ve Vámi zvoleném programovacím jazyku s využitím
 | Jiří Marák [@xmarak02](https://github.com/xmarak02) | [`návrh standardizovaných úloh + interface`](./brainstorming/ulohy/) |
 | Vojtěch Lukáš [@voytex](https://github.com/voytex) |[`backend`](./brainstorming/back-end/) | [Repozitář](https://github.com/voytex/kry_gen-backend) / [Webová služba](http://vut-fekt-mpckry-gr14.8u.cz/alltasks) |
 
-### Task Pool
-[`back-end (návrh, zpracování)`](./brainstorming/back-end/),  [`databáze úloh (SQL? + rozhraní?)`](./brainstorming/ulohy/) 
 
 ### DLs
 > **Warning**<br>
