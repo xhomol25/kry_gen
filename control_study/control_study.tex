@@ -54,7 +54,7 @@ Architektura back-endu je navržena podle doporučení REST API. Původní návr
     .2 index.php.
 }
 \vspace{1em}
-Soubory ve složce \texttt{Model} slouží k propojení a komunikaci s databází. 
+Moduly ve složce \texttt{Model} slouží k propojení a komunikaci s databází. Modul \texttt{Task\-Controller.php} je využit ke zpracování různých požadavků z uživatelské aplikace. Soubory ve složce \texttt{inc} by se daly označit jako \uv{servisní moduly}: \texttt{config.php} definuje přístupové údaje k databázi jako konstanty\footnote{Vzhledem k citlivé povaze obsažených informací je tento soubor vyřazen z verzování pomocí záznamu v \texttt{.gitignore}.}; modul \texttt{boot\-strap.php} pak obstarává správné propojení modulů. Modul \texttt{index.php} je pak ten, který přímo komunikuje s klientskou aplikací, třídí její požadavky a korektně na ně odpovídá. 
 
 \subsection{Front-end}
 
