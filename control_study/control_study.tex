@@ -173,6 +173,27 @@ Architektura back-endu je navržena podle doporučení REST API. Původní návr
 \vspace{1em}
 Moduly ve složce \texttt{Model} slouží k propojení a komunikaci s databází. Modul \texttt{Task\-Controller.php} je využit ke zpracování různých požadavků z uživatelské aplikace. Soubory ve složce \texttt{inc} by se daly označit jako \uv{servisní moduly}: \texttt{config.php} definuje přístupové údaje k databázi jako konstanty\footnote{Vzhledem k citlivé povaze obsažených informací je tento soubor vyřazen z verzování pomocí záznamu v \texttt{.gitignore}.}; modul \texttt{boot\-strap.php} pak obstarává správné propojení modulů. Modul \texttt{index.php} je pak ten, který přímo komunikuje s klientskou aplikací, třídí její požadavky a korektně na ně odpovídá. 
 
+\subsection{API dotazy}
+\begin{table}[t]
+    \centering
+    \caption{Tabulka API dotazů}
+    \label{tab:api_dotazy}
+    \vspace{.5em}
+    \begin{tabular}{|l | p{5cm} |}
+        \hline
+        \textbf{URL} & \textbf{Popis} \\
+        \hline \hline
+      \texttt{/index.php/alltasks} & Vrátí JSON objekt obsahující všechny úlohy z databáze \\
+        \hline
+        \texttt{/index.php/task?code=<kód>} & Vrátí jednu (nebo více) úloh(u) daného typu \\
+        \hline
+        \texttt{/index.php/randomtask} & Vrátí jednu náhodně vybranou úlohu \\
+        \hline
+    \end{tabular}
+\end{table}
+
+V rámci projektu budou využity dotazy z tabulky \ref{tab:api_dotazy}. Struktura těchto dotazů respektuje doporučení REST API. Demonstrační příklad je možné navštívit na tomto \href{http://vut-fekt-mpckry-gr14.8u.cz/index.php/alltasks}{odkazu}.
+
 \subsection{Front-end}
 
 \section{Současný stav}
