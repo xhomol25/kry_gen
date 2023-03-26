@@ -10,7 +10,7 @@
 \input{schemes/database-glyph.tex}
 
 \title{Generátor úloh do aplikované kryptografie\\Kontrolní studie}
-\author{Michal Homola,\\Dominik Chremčík,\\Jiří Marák,\\Vojtěch Lukáš}
+\author{Michal Homola,\\Dominik Chrenčík,\\Jiří Marák,\\Vojtěch Lukáš}
 
 \begin{document}
 \maketitle
@@ -37,16 +37,16 @@ Klientská aplikace bude fungovat jako přístupový bod a sehrávat roli prezen
 
 V rámci návrhu kryptografických úloh, byly úlohy co nejvíce standardizované, z důvodu jejich uložení v jednotné databázi. Zároveň musí být výsledky jednoznačné tak, aby byly dobře porovnatelné s výsledky zadanými řešitelem. Proto jsou výsledky koncipovány jako číslo, či prosté \uv{ano/ne}.      
 
- V databázi jsou zahrnuty různé typů kryptografických úloh, aby bylo možné si vyzkoušet různé druhy kryptografických algoritmů a technologií. Součástí každé úlohy bude i nápověda k řešení, tak aby i řešitel, který si neví rady, mohl příklad vyřešit.
+ V databázi jsou zahrnuty různé typy kryptografických úloh, aby bylo možné si vyzkoušet různé druhy kryptografických algoritmů a technologií. Součástí každé úlohy bude i nápověda k řešení, tak aby i řešitel, který si neví rady, mohl příklad vyřešit.
 
 \subsubsection{RSA}
 Část  úloh zahrnuje výpočet RSA algoritmu. Zadáno je zde šifrování nebo naopak dešifrování zprávy pomocí zadaného klíče algoritmem RSA.
 
 Vygenerování klíče: 
 \begin{align*}
-     n &= p \times q \\
-    \phi(n) &= (p-1) \times (q-1) \\
-    e, d &= \text{pro které platí} (d \times e) \bmod \phi(n) = 1 \\
+     n &= p \cdot q \\
+    \phi(n) &= (p-1) \cdot (q-1) \\
+    e, d &= \text{pro které platí}\ (d \cdot e) \bmod \phi(n) = 1 \\
     \text{Veřejný klíč: } (n, e) \\
     \text{Soukromý klíč: } d
 \end{align*}
@@ -106,24 +106,26 @@ Test prvočíselnosti se také nachází v databázi úloh. Tato úloha zahrnuje
 \end{align*}
 
 \subsubsection{GCD a LCM}
-Dále jsou zde také příklady na výpočet nejmenšího společného násobku (Least Common Multiple - LCM) a největšího společného dělitele (GCD - Greatest common divisor). které také najdou uplatnění v kryptografii. Při řešení těchto příkladů lze využít například rozklad na prvočísla.
+Dále jsou zde také příklady na výpočet nejmenšího společného ná\-so\-bku (Le\-ast Com\-mon Multiple -- LCM) 
+a největšího společného dělitele (GCD -- Greatest common divisor). 
+které také najdou uplatnění v kryptografii. Při řešení těchto příkladů lze využít například rozklad na prvočísla.
 \newline
 
 \subsubsection{Modulární aritmetika}
-V databázi jsou také příklady na modulární aritmetiku,,jako výpočet operace modulo nebo kongruence. 
+V databázi jsou také příklady na modulární aritmetiku, jako výpočet operace modulo nebo kongruence. 
 Operace modulo $(mod\,n)$ vrátí pouze zbytek vstupního čísla po
 dělení cıslem $n$.
 
 
 Cele číslo je kongruentní modulo $n$ s celým číslem $b$ tehdy, když
-je rozdíl $a - b$ dělitelný číslem $n$. Zapisujeme jako $a \equiv b (mod n)$.
+je rozdíl $a - b$ dělitelný číslem $n$. Zapisujeme jako $a \equiv b \pmod n$.
 Pro kongruence modulo platí:
 \begin{align*}
     a \equiv b \pmod{m} \\
     b \equiv a \pmod{m} \\
     % a  neco 
 \end{align*}
-
+%% next section?
 V dalším vývoji by mohla být nápověda rozdělena na více úrovní, tak aby si je řešitel mohl postupně vyžádat v případě, že mu bude postačovat pouze malá nápověda a potřebuje pouze \uv{nakopnout}, nebo si neví rady a potřebuje nápovědu větší. Taktéž budu přidány další úlohy z oblasti aplikované kryptografie.   
 
 \subsection{Back-end}
