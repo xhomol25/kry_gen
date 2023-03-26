@@ -40,22 +40,22 @@ V rámci návrhu kryptografických úloh, byly úlohy co nejvíce standardizovan
  V databázi jsou zahrnuty různé typy kryptografických úloh, aby bylo možné si vyzkoušet různé druhy kryptografických algoritmů a technologií. Součástí každé úlohy bude i nápověda k řešení, tak aby i řešitel, který si neví rady, mohl příklad vyřešit.
 
 \subsection{Konstrukce databáze}
-V tabulce \ref{tab:struktura_databaze} lze vidět současnou strukturu SQL databáze. Sloupec \textbf{ID} slouží jako primární klíč databáze, v buňce \textbf{Zadání} se pak nachází textový popis úlohy. Zde stojí za povšimnutí, že všechny číselné hodnoty důležité k výpočtu jsou nahrazeny zástupnými znaky $\$n$. Na místa těchto znaků bude logika v backendu vkládat vygenerované hodnoty. Díky tomu bude možno jednu úlohu řešit vícekrát, pokaždé s jinými parametry.  
+V tabulce \ref{tab:struktura_databaze} lze vidět současnou strukturu SQL databáze. Sloupec \textbf{ID} slouží jako primární klíč databáze, v buňce \textbf{Zadání} se pak nachází textový popis úlohy. Zde stojí za povšimnutí, že všechny číselné hodnoty důležité k výpočtu jsou nahrazeny zástupnými znaky $\$n$. Na místa těchto znaků bude logika v back-endu vkládat vygenerované hodnoty. Díky tomu bude možno jednu úlohu řešit vícekrát, pokaždé s jinými parametry. \textbf{Kód} úlohy pak slouží pro snazší rozlišení úloh. Uživatel si bude moct vybrat jaký typ bude chtít řešit, back-end si tuto úlohu vytáhne z databáze, opatří ji vygenerovanými operandy a spolu se správným výsledkem a nápovědou z buňky \textbf{Nápověda} ji zašle uživateli.  
  \begin{table}
     \centering
     \caption{Struktura SQL databáze}
     \label{tab:struktura_databaze}
     \vspace{.5em}
-    \begin{tabular}[h]{| l | p{7cm} | l | }
+    \begin{tabular}[h]{| l | p{6cm} | l | l |}
         \hline
-        \textbf{ID} & \textbf{Zadání} & \textbf{Kód} \\
-        \texttt{INT} & \texttt{TEXT} & \texttt{VARCHAR(5)} \\
+        \textbf{ID} & \textbf{Zadání} & \textbf{Kód} & \textbf{Nápověda} \\
+        \texttt{INT} & \texttt{TEXT} & \texttt{VARCHAR(5)} & \texttt{TEXT} \\
         \hline\hline
-        1 & Rozhodněte (ano/ne) zda je číslo $n=\$1$ prvočíslo & \texttt{PR} \\
+        1 & Rozhodněte (ano/ne) zda je číslo $n=\$1$ prvočíslo & \texttt{PR} & \dots \\
         \hline
-        2 & Zašifrujte zprávu $m=\$4$, pomocí RSA kryptosystému. Prvočísla jsou $p=\$1;\ q=\$2$, a soukromý klíč je $e=\$3$ & \texttt{RSAe} \\
+        2 & Zašifrujte zprávu $m=\$4$, pomocí RSA kryptosystému. Prvočísla jsou $p=\$1;\ q=\$2$, a soukromý klíč je $e=\$3$ & \texttt{RSAe} & \dots\\
         \hline
-        \vdots & \vdots & \vdots \\
+        \vdots & \vdots & \vdots & \vdots \\
         \hline
     \end{tabular}
  \end{table}
@@ -137,7 +137,7 @@ které také najdou uplatnění v kryptografii. Při řešení těchto příklad
 \subsubsection{Modulární aritmetika}
 V databázi jsou také příklady na modulární aritmetiku, jako výpočet operace modulo nebo kongruence. 
 Operace modulo $(mod\,n)$ vrátí pouze zbytek vstupního čísla po
-dělení cıslem $n$.
+dělení číslem $n$.
 
 
 Cele číslo je kongruentní modulo $n$ s celým číslem $b$ tehdy, když
