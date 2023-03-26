@@ -155,26 +155,9 @@ V dalším vývoji by mohla být nápověda rozdělena na více úrovní, tak ab
 \subsection{Back-end}
 Architektura back-endu je navržena podle doporučení REST API. Původní návrhy řešení počítaly s využitím .NET serveru na portálu Microsoft Azure. Nakonec bylo ale upřednostněno řešení využívající PHP server. Celé řešení back-endu bylo založeno na \cite{restapi}. Od začátku byl projekt vyvíjen přímo na serveru pro usnadnění přístupu. 
 
-\subsubsection{Soubory webového serveru}
-\dirtree{%
-    .1 web.
-    .2 Model.
-    .3 Database.php.
-    .3 TaskModel.php.
-    .2 Controller.
-    .3 Api.
-    .4 BaseController.php.
-    .4 TaskController.php.
-    .2 inc.
-    .3 config.php.
-    .3 bootstrap.php.
-    .2 index.php.
-}
-\vspace{1em}
-Moduly ve složce \texttt{Model} slouží k propojení a komunikaci s databází. Modul \texttt{Task\-Controller.php} je využit ke zpracování různých požadavků z uživatelské aplikace. Soubory ve složce \texttt{inc} by se daly označit jako \uv{servisní moduly}: \texttt{config.php} definuje přístupové údaje k databázi jako konstanty\footnote{Vzhledem k citlivé povaze obsažených informací je tento soubor vyřazen z verzování pomocí záznamu v \texttt{.gitignore}.}; modul \texttt{boot\-strap.php} pak obstarává správné propojení modulů. Modul \texttt{index.php} je pak ten, který přímo komunikuje s klientskou aplikací, třídí její požadavky a korektně na ně odpovídá. 
 
-\subsection{API dotazy}
-\begin{table}[t]
+\subsubsection{API dotazy}
+\begin{table}[b]
     \centering
     \caption{Tabulka API dotazů}
     \label{tab:api_dotazy}
@@ -194,9 +177,45 @@ Moduly ve složce \texttt{Model} slouží k propojení a komunikaci s databází
 
 V rámci projektu budou využity dotazy z tabulky \ref{tab:api_dotazy}. Struktura těchto dotazů respektuje doporučení REST API. Demonstrační příklad je možné navštívit na tomto \href{http://vut-fekt-mpckry-gr14.8u.cz/index.php/alltasks}{odkazu}.
 
+\subsubsection{Obsah JSON odpovědi}
+Obsahem JSON odpovědi nebudou \emph{pouze} buňky z tabulky \ref{tab:struktura_databaze}, ale také další hodnoty pod klíči, které se v této tabulce nenachází. Nejdůležitější hodnotou bude \textbf{Správný výsledek}, ten se v SQL u dané úlohy nenachází, protože je počítán z vygenerovaných hodnot. 
+
+V této fázi vývoje je tedy počítáno s následujícími klíči:
+\begin{itemize}
+    \item název úkolu,
+    \item zadání úkolu,
+    \item kód úkolu,
+    \item nápověda,
+    \item správné řešení (dosazeno back-endem).
+\end{itemize}
+
+
 \subsection{Front-end}
+Tato část projektu bude mít formu jednoduché aplikace vyvinuté v jazyce Python. Nejprve si vyžádá seznam úloh, které jsou uživateli k dispozici. Uživatel si z výběru zvolí jednu úlohu, ta je mu pak prezentována. V tuto chvíli má uživatel také možnost vyžádat si nápovědu. Po zadání řešení je pak vyhodnocena správnost výsledku. Nyní se nabízí možnost počítat skóre a čas potřebný k vyřešení. 
+
+Aplikace může mít více podob. Implicitně se počítá s konzolovou aplikací, ale nic nebrání ani vývoji elementárního grafického rozhraní pro příjemnější uživatelský zážitek. 
+
+
 
 \section{Současný stav}
+\subsection{Back-end}
+\subsubsection{Soubory webového serveru}
+\dirtree{%
+    .1 web.
+    .2 Model.
+    .3 Database.php.
+    .3 TaskModel.php.
+    .2 Controller.
+    .3 Api.
+    .4 BaseController.php.
+    .4 TaskController.php.
+    .2 inc.
+    .3 config.php.
+    .3 bootstrap.php.
+    .2 index.php.
+}
+\vspace{1em}
+Moduly ve složce \texttt{Model} slouží k propojení a komunikaci s databází. Modul \texttt{Task\-Controller.php} je využit ke zpracování různých požadavků z uživatelské aplikace. Soubory ve složce \texttt{inc} by se daly označit jako \uv{servisní moduly}: \texttt{config.php} definuje přístupové údaje k databázi jako konstanty\footnote{Vzhledem k citlivé povaze obsažených informací je tento soubor vyřazen z verzování pomocí záznamu v \texttt{.gitignore}.}; modul \texttt{boot\-strap.php} pak obstarává správné propojení modulů. Modul \texttt{index.php} je pak ten, který přímo komunikuje s klientskou aplikací, třídí její požadavky a korektně na ně odpovídá. 
 
 \section*{Závěr}
 
