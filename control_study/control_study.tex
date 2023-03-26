@@ -39,6 +39,29 @@ V rámci návrhu kryptografických úloh, byly úlohy co nejvíce standardizovan
 
  V databázi jsou zahrnuty různé typy kryptografických úloh, aby bylo možné si vyzkoušet různé druhy kryptografických algoritmů a technologií. Součástí každé úlohy bude i nápověda k řešení, tak aby i řešitel, který si neví rady, mohl příklad vyřešit.
 
+\subsection{Konstrukce databáze}
+V tabulce \ref{tab:struktura_databaze} lze vidět současnou strukturu SQL databáze. Sloupec \textbf{ID} slouží jako primární klíč databáze, v buňce \textbf{Zadání} se pak nachází textový popis úlohy. Zde stojí za povšimnutí, že všechny číselné hodnoty důležité k výpočtu jsou nahrazeny zástupnými znaky $\$n$. Na místa těchto znaků bude logika v backendu vkládat vygenerované hodnoty. Díky tomu bude možno jednu úlohu řešit vícekrát, pokaždé s jinými parametry.  
+ \begin{table}
+    \centering
+    \caption{Struktura SQL databáze}
+    \label{tab:struktura_databaze}
+    \vspace{.5em}
+    \begin{tabular}[h]{| l | p{7cm} | l | }
+        \hline
+        \textbf{ID} & \textbf{Zadání} & \textbf{Kód} \\
+        \texttt{INT} & \texttt{TEXT} & \texttt{VARCHAR(5)} \\
+        \hline\hline
+        1 & Rozhodněte (ano/ne) zda je číslo $n=\$1$ prvočíslo & \texttt{PR} \\
+        \hline
+        2 & Zašifrujte zprávu $m=\$4$, pomocí RSA kryptosystému. Prvočísla jsou $p=\$1;\ q=\$2$, a soukromý klíč je $e=\$3$ & \texttt{RSAe} \\
+        \hline
+        \vdots & \vdots & \vdots \\
+        \hline
+    \end{tabular}
+ \end{table}
+    
+
+
 \subsubsection{RSA}
 Část  úloh zahrnuje výpočet RSA algoritmu. Zadáno je zde šifrování nebo naopak dešifrování zprávy pomocí zadaného klíče algoritmem RSA.
 
@@ -125,6 +148,7 @@ Pro kongruence modulo platí:
     b \equiv a \pmod{m} \\
     % a  neco 
 \end{align*}
+
 %% next section?
 V dalším vývoji by mohla být nápověda rozdělena na více úrovní, tak aby si je řešitel mohl postupně vyžádat v případě, že mu bude postačovat pouze malá nápověda a potřebuje pouze \uv{nakopnout}, nebo si neví rady a potřebuje nápovědu větší. Taktéž budu přidány další úlohy z oblasti aplikované kryptografie.   
 
